@@ -1,0 +1,204 @@
+/* ---------- Body ---------- */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff; /* White background */
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px 20px;
+    color: #353535; /* Black text */
+}
+
+/* ---------- Heading ---------- */
+h1 {
+    text-align: center;
+    margin-bottom: 28px;
+    color: #353535; /* Black heading */
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+/* ---------- Input Container ---------- */
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#taskInput {
+    width: 70%;
+    padding: 13px 14px;
+    font-size: 15px;
+    border: 1px solid #353535; /* Black border */
+    border-radius: 12px 10px 12px 10px;
+    background-color: #ffffff; /* White input */
+    color: #353535; /* Black text */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease-in-out;
+}
+
+#taskInput:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ---------- Add Task Button ---------- */
+#newTask {
+    padding: 13px 22px;
+    font-size: 15px;
+    border: 1px solid #353535; /* Black border */
+    border-radius: 10px 12px 10px 12px;
+    background-color: #353535; /* Black button */
+    color: #ffffff; /* White text */
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+#newTask:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+    background-color: #333333; /* Dark gray hover */
+}
+
+/* ---------- Task List ---------- */
+ul#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9; /* Light gray task background */
+    padding: 15px 18px;
+    margin-bottom: 14px;
+    border-radius: 14px 12px 14px 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.25s ease-in-out;
+}
+
+.taskItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.task p {
+    margin: 0 10px;
+    font-size: 15px;
+    color: #353535; /* Black text */
+}
+
+.task.completed p {
+    text-decoration: line-through;
+    color: #666666; /* Gray for completed tasks */
+    opacity: 0.85;
+}
+
+/* ---------- Emoji Icons ---------- */
+.icons span {
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    color: #353535; /* Black icons */
+}
+
+.icons span:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* ---------- Progress Bar ---------- */
+#progressContainer {
+    width: 100%;
+    background: #e0e0e0; /* Light gray container */
+    height: 20px;
+    border-radius: 12px;
+    margin-top: 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background-color: #353535; /* Black progress bar */
+    border-radius: 12px;
+    transition: width 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-weight: 600;
+    color: #ffffff; /* White text inside progress */
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+#numbers {
+    margin-top: 6px;
+    text-align: right;
+    font-weight: 500;
+    font-size: 13px;
+    color: #353535; /* Black text */
+}
+
+/* ---------- Checkboxes ---------- */
+.task input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #353535; /* Black checkbox */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.task input[type="checkbox"]:hover {
+    transform: scale(1.2);
+}
+
+/* ---------- Mobile Responsiveness ---------- */
+@media (max-width: 500px) {
+    #taskInput {
+        width: 65%;
+    }
+    
+    #newTask {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+    
+    .taskItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .icons {
+        margin-top: 10px;
+    }
+}
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #000000; /* black text */
+    margin-left: 10px;
+}
+
+.icon-wrapper .icon-label {
+    margin-top: 2px;
+}
+#quote {
+    text-align: center;
+    font-style: italic;
+    color: #000000; /* Black text */
+    margin: 15px 0 25px 0;
+    font-size: 16px;
+}

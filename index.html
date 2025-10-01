@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Task Manager</h1>
+    <div id="quote">"Do it now. Sometimes ‘later’ becomes ‘never’."</div>
+
+
+    <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        
+        <button id="newTask">Add Task</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <div id="progressContainer">
+        <div id="progress">
+            <span id="progressPercent">0%</span>
+        </div>
+    </div>
+    <div id="numbers">0 / 0</div>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</body>
+</html>
